@@ -13,16 +13,55 @@ function removeBook(title) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+function removeBookFromLocalStorage(title, author) {
+  let books = JSON.parse(localStorage.getItem('books')) || [];
+  books = books.filter((book) => book.title !== title || book.author !== author);
+  localStorage.setItem('books', JSON.stringify(books));
+}
+
 function displayBooks() {
-  const div = document.querrySelector('books');
   const bookList = document.getElementById('book-lists');
   bookList.innerHTML = '';
 
   books.forEach((book) => {
     const listItem = document.createElement('li');
+    listItem.style.listStyle = 'none';
 
-    listItem.textContent = `${book.title} <br> ${book.author}`;
+    const rmvBtn = document.createElement('button');
+    rmvBtn.textContent = 'Remove';
+    rmvBtn.classList.add('remove-button');
+
+    const line = document.createElement('hr');
+
+    listItem.innerHTML = `${book.title} <br> ${book.author}`;
     bookList.appendChild(listItem);
-    div.appendChild(bookList);
+    bookList.appendChild(rmvBtn);
+    bookList.appendChild(line);
   });
 }
+
+document.getElementById('button').addEventListener('click', () => {
+  const titleInput = document.getElementById('title');
+  const authorInput = document.getElementById('author');
+
+  addBook(titleInput.value, authorInput.value);
+
+  displayBooks();
+
+  titleInput.value = '';
+  authorInput.value = '';
+});
+
+// Event delegation for the "Remove" button click.
+
+document.getElementById('book-lists').addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-button')) {
+    const { title } = event.target.dataset;
+
+    removeBook(title);
+
+    displayBooks();
+  }
+});
+
+displayBooks();
