@@ -25,6 +25,7 @@ class BookCollection {
     this.books.forEach((book) => {
       const listItem = document.createElement('li');
       listItem.style.listStyle = 'none';
+      listItem.classList.add('list-item');
 
       const rmvBtn = document.createElement('button');
       rmvBtn.textContent = 'Remove';
