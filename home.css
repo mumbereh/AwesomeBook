@@ -1,0 +1,58 @@
+/* home.css */
+
+/* Reset default margin and padding for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  border: 2px solid;
+}
+
+/* Style the navigation */
+nav {
+  background-color: #969292;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.links {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links li {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: blue;
+}
+
+#footer {
+  text-align: left;
+  background-color: #969292;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+
+
