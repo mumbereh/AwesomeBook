@@ -27,7 +27,7 @@ h1 {
 
 #book-lists .remove-button {
   margin-bottom: 5%;
-  width: auto; 
+  width: auto;
 }
 
 hr {
@@ -38,12 +38,6 @@ hr {
   height: 2px;
   background-color: #000;
   border-radius: 30%;
-}
-
-.forms {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .forms {
