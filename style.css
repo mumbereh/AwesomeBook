@@ -1,3 +1,55 @@
-* {
-  margin: 0;
+body {
+  background-color: #fff;
+  padding: 10%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.books {
+  border: 2px solid #000;
+}
+
+#book-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 5%;
+}
+
+#book-lists .list-item {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  float: left;
+}
+
+#book-lists .remove-button {
+  margin-bottom: 5%;
+  width: auto;
+}
+
+hr {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 30%;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  text-align: center;
+}
+
+#button {
+  float: right;
 }
