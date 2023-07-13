@@ -53,17 +53,13 @@ hr {
   text-align: center;
 }
 
-element.style {
-  padding: 0;
-}
-
 nav {
   border: 1.5px solid #000;
   display: flex;
   justify-content: space-between;
   margin: 10px;
   align-items: center;
-  width: 100%
+  width: 100%;
 }
 
 .logo {
