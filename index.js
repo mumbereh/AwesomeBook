@@ -74,3 +74,19 @@ document.getElementById('book-lists').addEventListener('click', (event) => {
   }
 });
 bookCollection.displayBooks();
+
+// /////////////////////////////////////////////////////////
+
+// eslint-disable-next-line no-unused-vars
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId);
+
+  const sections = document.getElementsByTagName('section');
+
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < sections.length; i++) {
+    sections[i].style.display = 'none';
+  }
+
+  section.style.display = 'block';
+}
